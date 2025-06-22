@@ -1,19 +1,19 @@
-import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Home from './pages/Home';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api/ping')
-      .then((res) => res.text())
-      .then((data) => setMessage(data))
-      .catch((err) => console.error('❌ Backend not responding:', err));
-  }, []);
+  const isAuthenticated = !!localStorage.getItem('token');
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-800 text-xl font-semibold">
-      {message || 'Loading...'}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
+        <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/" />} />
+        <Route path="/register" element={!isAuthenticated ? <Register /> : <Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
 }
 

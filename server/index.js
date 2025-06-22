@@ -6,22 +6,15 @@ require('dotenv').config();
 const app = express();
 const PORT = 5000;
 
-// ✅ Add this BEFORE any routes
-app.use(cors({
-  origin: 'http://localhost:5173', // React client
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
-
-// ✅ Optional: Parse incoming JSON
+// Middleware
+app.use(cors());
 app.use(express.json());
 
-// ✅ Ping route
-app.get('/api/ping', (req, res) => {
-  res.send('Pong 🏓 Server is working!');
-});
+// Routes
+app.get('/api/ping', (req, res) => res.send('Pong 🏓'));
+app.use('/api/auth', require('./routes/auth'));
 
-// ✅ MongoDB connection
+// MongoDB Connection
 mongoose.connect(process.env.MONGO_URL)
   .then(() => {
     console.log('✅ Connected to MongoDB');
