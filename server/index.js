@@ -13,6 +13,10 @@ app.use(express.json());
 // Routes
 app.get('/api/ping', (req, res) => res.send('Pong 🏓'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/jobs', require('./routes/jobs'));
+app.use('/api/interviews', require('./routes/interviews'));
+app.use('/api/analytics', require('./routes/analytics'));
+
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URL)
