@@ -23,6 +23,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       colors:{
          "blue-slate": "#F3F9FF",
@@ -33,6 +34,7 @@ module.exports = {
       gap:{
         "10":"200px"
       },
+      
     },
   },
   plugins: [],

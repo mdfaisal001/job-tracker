@@ -15,10 +15,22 @@ const interviewSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  time: {
+    type: String, // Optional: "10:00 AM", "2:30 PM"
+    default: '',
+  },
   round: {
     type: String,
     enum: ['HR', 'Technical', 'Managerial', 'Final', 'Other'],
     default: 'HR',
+  },
+  location: {
+    type: String, // Optional: "Video Call", "Office Visit"
+    default: 'Online',
+  },
+  company: {
+    type: String, // Optional: Used in your calendar display
+    default: 'Unknown',
   },
   notes: {
     type: String,

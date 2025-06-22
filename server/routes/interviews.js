@@ -5,13 +5,16 @@ const auth = require('../middleware/authMiddleware');
 // ✅ Create Interview with plain jobTitle
 router.post('/', auth, async (req, res) => {
   try {
-    const { jobTitle, date, round, notes } = req.body;
+    const { jobTitle, date, time, round, location, company, notes } = req.body;
 
     const interview = new Interview({
       jobTitle,
       user: req.user.userId,
       date,
+      time,         // ✅ capture time
       round,
+      location,     // ✅ capture location
+      company,      // ✅ capture company (optional)
       notes,
     });
 
