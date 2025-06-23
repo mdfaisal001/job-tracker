@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+
 const app = express();
 const PORT = 5000;
 
@@ -16,6 +17,8 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/jobs', require('./routes/jobs'));
 app.use('/api/interviews', require('./routes/interviews'));
 app.use('/api/analytics', require('./routes/analytics'));
+app.use('/api/users', require('./routes/user'));
+
 
 
 // MongoDB Connection
