@@ -137,8 +137,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- 🔥 Live Site: [Deployed App](https://your-app-url.vercel.app)
-- 📬 Contact: [mdfaisal001](https://github.com/mdfaisal001)
+- 🔥 Live Site: [Deployed App](https://job-tracker-piba.vercel.app/)
+- 📬 Contact: [Linkedin](https://www.linkedin.com/in/mohammed-faisal-s-30690825b/)
 
 ---
 
