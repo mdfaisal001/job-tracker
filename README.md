@@ -4,6 +4,32 @@ Job Pilot is a full-stack MERN application designed to help users efficiently ma
 
 ---
 
+## 🎥 Demo
+
+Here’s a quick preview of the Job Pilot UI:
+
+![Job Tracker Demo](./demo/jobpilot-preview.gif)
+
+> The app lets you add and manage interviews from a clean calendar UI, send email notifications, and track job rounds easily.
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./demo/demo1.png" alt="Homepage" width="80%" />
+</p>
+
+<p align="center">
+  <img src="./demo/demo2.png" alt="Calendar View" width="80%" />
+</p>
+
+<p align="center">
+  <img src="./demo/demo3.png" alt="Interview Form" width="80%" />
+</p>
+
+---
+
 ## 🚀 Features
 
 - 📅 Add interviews with details like:
