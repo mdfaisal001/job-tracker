@@ -170,4 +170,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🌟 Don’t forget to star the repo if you find it useful!
 
-#MERNStack #WebDev #OpenSource #Nodejs #Reactjs #MongoDB #JobTracker
+#MERNStack #WebDev #OpenSource #Nodejs #Reactjs #MongoDB #JobTracker #MERN
